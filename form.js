@@ -73,7 +73,7 @@ function validacion() {
     	campoCorreo.style.outline = "2px solid #0f0";
     	return false;
     } else if (!expCorreo.test(usuarioCorreo)) {
-    	var mensajeInvalidoCorreo = "Su correo electronico es invalido!";
+    	var mensajeInvalidoCorreo = "correo inválido!(Sin mayúsculas ni espacios)";
     	correoError.innerHTML = mensajeInvalidoCorreo;
     	campoCorreo.style.outline = "2px solid #f00";
     	return false;
