@@ -66,7 +66,7 @@ h4{
 
 .Info{
     margin: 2%;
-    font-family: cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-indent: 30px;
     text-align: center;
     display: flex;
@@ -112,4 +112,36 @@ footer{
     padding-bottom: 0.5%;
     font-family: 'Amaranth', sans-serif;
     color: rgb(51, 238, 14);
+}
+
+/* Vista para smartphones */
+
+@media only screen and (max-width: 375px){
+
+    body{    
+        background-color: rgb(209, 113, 34);
+    }
+
+    h1{
+        font-size: 4vh;
+    }
+    
+    h4{
+        font-size: 2vh;
+        margin-bottom: 2vh;
+    }
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cascadas{
+        background: url(./img/cascadas.celu.jpg);
+        height: 65vh;
+    }
+
 }
