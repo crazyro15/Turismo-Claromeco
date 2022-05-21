@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+      background-color:rgb(231, 202, 121);
+  }
+
+ /* nav */
+
+  nav{
+      background-color: blue;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .redes{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.fa-brands{
+    margin-right: 7.5px;
+    margin-left: 7.5px;
+    color:white;
+    font-size: 4vh;
+}
+
+.redes > a:hover {
+    background-color: rgb(224, 39, 39);
+    border-radius: 30%;
+}
+
+.logo img{
+    height: 10vh;
+    margin: 1vh;
+}
+
+/* Header */
+
+.foto{
+    background: url(./img/claromeco2.jpg);
+    height: 80vh;
+    background-position: center;
+    background-repeat : repeat;
+    background-size: cover;
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+    text-align: center;
+}
+
+.contimagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+h1, h4{
+    margin-top: 4vh;
+
+}
+
+.Bienvenidos{
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+}
+
+h1{
+    font-size: 8vh;
+}
+
+h4{
+    font-size: 4vh;
+    margin-bottom: 4vh;
+}
+
+/*Section1*/
+
+.infocont{ 
+    border-radius: 22px;
+    border: solid blue 2px;
+    background-color: rgb(250, 193, 220);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Info{
+    margin: 2%;
+    font-family: cursive;
+    text-indent: 30px;
+    text-align: center;
+}
+
+/*Section2*/
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.playa, .cascadas, .forestal{
+    text-decoration: none;
+    color: white;
+    transform: translate(-50%, -50%);
+    background: rgba(29, 171, 209, 1);
+    font-family: 'calibri', sans-serif;
+    text-transform: uppercase;
+    border-radius: 50%;
+    padding: 4vh;
+    animation: animacion 2s linear infinite;
+}
+
+@keyframes animacion {
+    0% {
+      box-shadow: 0 0 0 0 rgba(29, 171, 209, .6),  0 0 0 0 rgba(29, 171, 209, .6);
+    }
+  
+    30% {
+      box-shadow: 0 0 0 100px rgba(29, 171, 209, 0), 0 0 0 0 rgba(29, 171, 209, .6);
+    }
+  
+    65% {
+      box-shadow: 0 0 0 100px rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 0 rgba(29, 171, 209, 0), 0 0 0 30px rgba(29, 171, 209, 0);
+    }
+}
+  
+
+.link1, .link2, .link3{
+    padding: 4vh;
+}
+
+.link1 > a:hover, .link2 > a:hover, .link3 > a:hover{
+    background-color: white;
+    color: rgba(29, 171, 209, 1);
+}
+
+/*Section3*/
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mapa{
+    display: flex;
+    border-radius: 22px;
+    border: solid blue 2px;
+    background-color: rgb(250, 193, 220);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.formu{
+    border-radius: 22px;
+    border: solid blue 2px;
+    background-color: rgb(250, 193, 220);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+	font-weight: normal;
+	font-size: 8vh;
+	text-align: center;
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+
+}
+
+header{
+	background-color: black;
+}
+
+iframe{
+    border-radius: 22px;
+}
+
+/*Form*/
+
+form {
+	width: 90%;
+	max-width: 100%;
+	height: auto;
+	margin: 20px auto 12px auto;
+	padding: 1%;
+	max-width: 100%;
+	box-shadow: 0px 5px 8px 5px rgb(51, 238, 14);
+	border: 1px solid #000;
+	border-radius: 1em;
+	background-color: blue;
+}
+
+label {
+	color: white;
+	display: block;
+	text-align:start;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 4px;
+	padding: 0px;
+}
+
+input[type="text"], textarea {
+	width: 360px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0px auto;
+	padding: 2px;
+	font-weight: bolder;
+	border: 1px solid black;
+    border-radius: 8px;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="submit"]{
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	margin: 4px 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 12px;
+	color: rgb(51, 238, 14);
+	padding: 5px;
+	text-align: center;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(51, 238, 14);
+    color: black;
+}
+
+.mensaje_error {
+	color: #000;
+	display: block;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-style: italic;
+	background-color:  rgb(51, 238, 14);
+	margin: 6px auto;
+} */
+
+/*Footer*/
+
+footer{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+}

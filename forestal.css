@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+      background-color:rgb(231, 202, 121);
+  }
+
+/*Header*/
+
+.estacionForestal{
+    background: url(./img/vivero.jpg);
+    height: 120vh;
+    background-position: center;
+    background-repeat : repeat;
+    background-size: cover;
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+    text-align: center;
+}
+
+.forestaldiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+h1, h4{
+    margin-top: 4vh;
+
+}
+
+.portada{
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+}
+
+h1{
+    font-size: 8vh;
+}
+
+h4{
+    font-size: 4vh;
+    margin-bottom: 4vh;
+}
+
+/*Section*/
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.infocont{ 
+    border-radius: 22px;
+    border: solid blue 2px;
+    background-color: rgb(250, 193, 220);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Info{
+    margin: 2%;
+    font-family: cursive;
+    text-indent: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img{
+    padding: 2%;
+    border-radius: 15vh;
+    height: 50%;
+    width: 60%;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+a{
+    text-align: center;
+    color: rgb(51, 238, 14);
+    background-color: black;
+    font-family: 'Amaranth', sans-serif;
+    font-size: x-large;
+}
+
+a:hover{
+    background-color: rgb(51, 238, 14);
+    color: black;
+}
+
+/*Footer*/
+
+footer{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: 'Amaranth', sans-serif;
+    color: rgb(51, 238, 14);
+}
