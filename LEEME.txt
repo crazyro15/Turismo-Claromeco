@@ -1,0 +1,1 @@
+La animación se ubica bajo el comentario "Section2" del archivo "home.css"
