@@ -243,7 +243,7 @@ textarea {
 	resize: none;
 }
 
-input[type="submit"]{
+.btnEnviar{
 	width: auto;
 	max-width: 100%;
 	height: auto;

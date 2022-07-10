@@ -78,18 +78,20 @@
 	                <h1>Contactanos</h1>
                 </header>
 
-                <form action="enviado.html" onsubmit="return validacion()">
+                <form onsubmit=validacion()>
 
-                    <label for="nombre">Tu nombre:</label>
-                    <input type="text" id="nombre" placeholder="Ingresa tu nombre" >
+                    <label for="txtNombre">Tu nombre:</label>
+                    <input type="text" id="txtNombre" placeholder="Ingresa tu nombre" >
                     <span id="nombre_error" class="mensaje_error" ></span>
-                    <label for="correo">Tu e-mail:</label>
-                    <input type="text" id="correo" placeholder="ej: usuario@dominio.com" >
+                    <label for="txtPrecio">Tu e-mail:</label>
+                    <input type="text" id="txtPrecio" placeholder="ej: usuario@dominio.com" >
                     <span id="correo_error" class="mensaje_error" ></span>
-                    <label for="mensaje">Tu mensaje:</label>
-                    <textarea name="" id="mensaje" placeholder="Aqui nos puedes dejar tu mensaje!" cols="30" rows="10"></textarea>
+                    <label for="txtStock">Tu mensaje:</label>
+                    <textarea name="" id="txtStock" placeholder="Aqui nos puedes dejar tu mensaje!" cols="30" rows="10"></textarea>
                     <span id="mensaje_error" class="mensaje_error" ></span>
-                    <input type="submit" value="Enviar!">
+                    <!-- <input type="submit" value="Enviar!" onclick="guardar()"> -->
+                    <!-- <button type="button" class="btn btn-success" onsubmit="guardar()">Grabar</button> -->
+                    <button class="btnEnviar" type="button" onclick="guardar()">Enviar!</button>
 
                 </form>
 
@@ -101,7 +103,8 @@
             <h5>By crazyro15® 2022</h5>
         </footer>
         
-        <script src="form.js" ></script>
+        <script src="js/form.js" ></script>
+        <script src="js/create.js"></script>
 </body>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
