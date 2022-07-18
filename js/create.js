@@ -1,13 +1,14 @@
 function guardar() {
  
     let n = document.getElementById("txtNombre").value
-    let p = document.getElementById("txtPrecio").value
-    let s = document.getElementById("txtStock").value
+    let p = document.getElementById("txtMail").value
+    let s = document.getElementById("txtMensaje").value
  
     let producto = {
         nombre: n,
         mail: p,
-        mensaje: s
+        mensaje: s,
+        respondido: "NO"
     }
     let url = "http://localhost:5000/mensajes"
     var options = {
@@ -16,17 +17,5 @@ function guardar() {
         headers: { 'Content-Type': 'application/json' },
        // redirect: 'follow'
     }
-    fetch(url, options)
-        .then(function () {
-            // console.log("creado")
-            location.href='enviado.html';
-            // Handle response we get from the API
-        })
-        .catch(err => {
-            //this.errored = true
-            alert("Ocurrió un error al guardar" )
-            console.error(err);
-        })
-        // windows.location.replace('back.html');
-        
+    
 }

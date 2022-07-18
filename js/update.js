@@ -15,10 +15,12 @@ function modificar() {
     let n = document.getElementById("txtNombre").value
     let p = document.getElementById("txtPrecio").value
     let s = document.getElementById("txtStock").value
+    let r = document.getElementById("txtRespondido").value
     let producto = {
         nombre: n,
         mail: p,
-        mensaje: s
+        mensaje: s,
+        respondido: r
     }
     let url = "http://localhost:5000/mensajes/"+id
     var options = {

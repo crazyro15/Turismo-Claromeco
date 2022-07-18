@@ -16,17 +16,19 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
     nombre=db.Column(db.String(100))
     mail=db.Column(db.Integer)
     mensaje=db.Column(db.Integer)
-    def __init__(self,nombre,mail,mensaje):   #crea el  constructor de la clase
+    respondido=db.Column(db.String(10))
+    def __init__(self,nombre,mail,mensaje,respondido):   #crea el  constructor de la clase
         self.nombre=nombre   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.mail=mail
         self.mensaje=mensaje
+        self.respondido=respondido
  
 db.create_all()  # crea las tablas
 #  ************************************************************
  
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields=('id','nombre','mail','mensaje')
+        fields=('id','nombre','mail','mensaje','respondido')
 producto_schema=ProductoSchema()            # para crear un producto
 productos_schema=ProductoSchema(many=True)  # multiples registros
  
@@ -57,7 +59,8 @@ def create_producto():
     nombre=request.json['nombre']
     mail=request.json['mail']
     mensaje=request.json['mensaje']
-    new_producto=Producto(nombre,mail,mensaje)
+    respondido=request.json['respondido']
+    new_producto=Producto(nombre,mail,mensaje,respondido)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
@@ -69,12 +72,25 @@ def update_producto(id):
     nombre=request.json['nombre']
     mail=request.json['mail']
     mensaje=request.json['mensaje']
+    respondido=request.json['respondido']
  
     producto.nombre=nombre
     producto.mail=mail
     producto.mensaje=mensaje
+    producto.respondido=respondido
     db.session.commit()
     return producto_schema.jsonify(producto)
+
+# @app.route('/mensajes/<id>',methods=['PUT'])
+# def update_respondido(id):
+#     producto=Producto.query.get(id)
+
+#     respondido=request.json['respondido']
+
+#     producto.respondido=respondido
+#     db.session.commit()
+#     return producto_schema.jsonify(producto)
+
  
  
  

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="back.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/539bd365de.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -35,16 +36,21 @@
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Email</th>
+                            <th>Respondido</th>
                             <th>Mensaje</th>
                         </tr>
                         <tr v-for="producto in productos">
                             <td>{{producto.id}}</td>
                             <td>{{producto.nombre}}</td>
                             <td>{{producto.mail}}</td>
+                            <td id="resp">{{producto.respondido}}</td>
                             <td>{{producto.mensaje}}</td>
+
                             <td>
                                 <a :href="'update.html?id='+producto.id+'&nombre='+producto.nombre+'&mail='+producto.mail+'&mensaje='+producto.mensaje" class="btn btn-outline-info">Modificar</a>
                                 <button v-on:click="eliminar(producto.id)" class="btn btn-outline-danger">Eliminar</button>
+                                <button v-on:click="respondido(producto.id,producto.nombre,producto.mail,producto.mensaje)" class="btn btn-outline-danger">Respondido <i class="fa-solid fa-circle-check"></i></button>
+                                <!-- <button class="btn btn-outline-info"  onclick="resp()">Respondido <i class="fa-solid fa-circle-check"></i></button> -->
                             </td>
                         </tr>
                     </table>
@@ -52,5 +58,6 @@
         </div>
     </main>
     <script src="./js/main.js"></script>
+    <!-- <script src="./js/back.js" ></script> -->
 </body>
 </html>
